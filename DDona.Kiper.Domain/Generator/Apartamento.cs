@@ -12,11 +12,10 @@ namespace DDona.Kiper.Domain
         }
 
         public int Id { get; set; }
-        public string Nome { get; set; }
         public int Numero { get; set; }
-        public string Bloco { get; set; }
-        public bool Status { get; set; }
+        public int Bloco { get; set; }
         public int CondominioId { get; set; }
+        public bool Status { get; set; }
 
         public virtual Condominio Condominio { get; set; }
         public virtual ICollection<Morador> Morador { get; set; }

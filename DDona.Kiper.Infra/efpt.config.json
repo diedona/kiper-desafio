@@ -11,19 +11,19 @@
    "Tables": [
       {
          "HasPrimaryKey": true,
-         "Name": "dbo.Apartamento"
+         "Name": "Apartamento"
       },
       {
          "HasPrimaryKey": true,
-         "Name": "dbo.Condominio"
+         "Name": "Condominio"
       },
       {
          "HasPrimaryKey": true,
-         "Name": "dbo.Morador"
+         "Name": "Morador"
       },
       {
          "HasPrimaryKey": true,
-         "Name": "dbo.Usuario"
+         "Name": "Usuario"
       }
    ],
    "UseDatabaseNames": false,

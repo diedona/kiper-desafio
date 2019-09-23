@@ -13,8 +13,8 @@ namespace DDona.Kiper.Domain
         public string Celular { get; set; }
         public string Cpf { get; set; }
         public string Email { get; set; }
-        public bool Status { get; set; }
         public int? ApartamentoId { get; set; }
+        public bool Status { get; set; }
 
         public virtual Apartamento Apartamento { get; set; }
     }

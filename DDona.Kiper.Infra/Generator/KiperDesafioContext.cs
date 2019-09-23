@@ -25,80 +25,86 @@ namespace DDona.Kiper.Infra
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.HasAnnotation("ProductVersion", "2.2.0-rtm-35687");
-
             modelBuilder.Entity<Apartamento>(entity =>
             {
-                entity.Property(e => e.Bloco)
-                    .IsRequired()
-                    .HasMaxLength(50)
-                    .IsUnicode(false);
+                entity.HasIndex(e => e.CondominioId)
+                    .HasName("FK_CONDOMINIO_APARTAMENTO_idx");
 
-                entity.Property(e => e.Nome)
-                    .IsRequired()
-                    .HasMaxLength(100)
-                    .IsUnicode(false);
+                entity.Property(e => e.Id).HasColumnType("int(11)");
+
+                entity.Property(e => e.Bloco).HasColumnType("int(11)");
+
+                entity.Property(e => e.CondominioId).HasColumnType("int(11)");
+
+                entity.Property(e => e.Numero).HasColumnType("int(11)");
+
+                entity.Property(e => e.Status).HasColumnType("bit(1)");
 
                 entity.HasOne(d => d.Condominio)
                     .WithMany(p => p.Apartamento)
                     .HasForeignKey(d => d.CondominioId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_Apartamento_Condominio");
+                    .HasConstraintName("FK_CONDOMINIO_APARTAMENTO");
             });
 
             modelBuilder.Entity<Condominio>(entity =>
             {
+                entity.Property(e => e.Id).HasColumnType("int(11)");
+
                 entity.Property(e => e.Nome)
                     .IsRequired()
-                    .HasMaxLength(150)
-                    .IsUnicode(false);
+                    .HasColumnType("varchar(100)");
+
+                entity.Property(e => e.Status).HasColumnType("bit(1)");
             });
 
             modelBuilder.Entity<Morador>(entity =>
             {
-                entity.Property(e => e.Celular)
-                    .HasMaxLength(50)
-                    .IsUnicode(false);
+                entity.HasIndex(e => e.ApartamentoId)
+                    .HasName("FK_MORADOR_APARTAMENTO_idx");
+
+                entity.Property(e => e.Id).HasColumnType("int(11)");
+
+                entity.Property(e => e.ApartamentoId).HasColumnType("int(11)");
+
+                entity.Property(e => e.Celular).HasColumnType("varchar(25)");
 
                 entity.Property(e => e.Cpf)
                     .IsRequired()
                     .HasColumnName("CPF")
-                    .HasMaxLength(20)
-                    .IsUnicode(false);
+                    .HasColumnType("varchar(20)");
 
                 entity.Property(e => e.DataNascimento).HasColumnType("date");
 
-                entity.Property(e => e.Email)
-                    .IsRequired()
-                    .HasMaxLength(200)
-                    .IsUnicode(false);
+                entity.Property(e => e.Email).HasColumnType("varchar(200)");
 
                 entity.Property(e => e.Nome)
                     .IsRequired()
-                    .HasMaxLength(200)
-                    .IsUnicode(false);
+                    .HasColumnType("varchar(200)");
 
-                entity.Property(e => e.Telefone)
-                    .HasMaxLength(50)
-                    .IsUnicode(false);
+                entity.Property(e => e.Status).HasColumnType("bit(1)");
+
+                entity.Property(e => e.Telefone).HasColumnType("varchar(25)");
 
                 entity.HasOne(d => d.Apartamento)
                     .WithMany(p => p.Morador)
                     .HasForeignKey(d => d.ApartamentoId)
-                    .HasConstraintName("FK_Morador_Apartamento");
+                    .HasConstraintName("FK_MORADOR_APARTAMENTO");
             });
 
             modelBuilder.Entity<Usuario>(entity =>
             {
-                entity.Property(e => e.Password)
+                entity.Property(e => e.Id).HasColumnType("int(11)");
+
+                entity.Property(e => e.Senha)
                     .IsRequired()
-                    .HasMaxLength(300)
-                    .IsUnicode(false);
+                    .HasColumnType("varchar(200)");
+
+                entity.Property(e => e.Status).HasColumnType("bit(1)");
 
                 entity.Property(e => e.Username)
                     .IsRequired()
-                    .HasMaxLength(50)
-                    .IsUnicode(false);
+                    .HasColumnType("varchar(50)");
             });
 
             OnModelCreatingExt(modelBuilder);
