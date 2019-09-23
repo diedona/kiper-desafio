@@ -7,6 +7,6 @@ namespace DDona.Kiper.Domain.BaseDomain
     public interface IEntity
     {
         int Id { get; set; }
-        public bool Status { get; set; }
+        bool Status { get; set; }
     }
 }

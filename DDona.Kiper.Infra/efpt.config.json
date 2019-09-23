@@ -1,0 +1,34 @@
+﻿{
+   "ContextClassName": "KiperDesafioContext",
+   "DefaultDacpacSchema": null,
+   "DoNotCombineNamespace": false,
+   "IdReplace": false,
+   "IncludeConnectionString": false,
+   "OutputPath": "Generator",
+   "ProjectRootNamespace": "DDona.Kiper.Infra",
+   "SelectedHandlebarsLanguage": 0,
+   "SelectedToBeGenerated": 1,
+   "Tables": [
+      {
+         "HasPrimaryKey": true,
+         "Name": "dbo.Apartamento"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "dbo.Condominio"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "dbo.Morador"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "dbo.Usuario"
+      }
+   ],
+   "UseDatabaseNames": false,
+   "UseFluentApiOnly": true,
+   "UseHandleBars": true,
+   "UseInflector": false,
+   "UseLegacyPluralizer": false
+}
