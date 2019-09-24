@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Interfaces\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DDona.Kiper.Domain\DDona.Kiper.Domain.csproj" />
+    <ProjectReference Include="..\DDona.Kiper.Infra\DDona.Kiper.Infra.csproj" />
+  </ItemGroup>
+
+</Project>
