@@ -1,4 +1,5 @@
 ﻿using DDona.Kiper.Service;
+using DDona.Kiper.WebApi.Auth;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -20,6 +21,13 @@ namespace DDona.Kiper.WebApi.Controllers
         public IActionResult Get()
         {
             return Ok(_condominioService.GetAll());
+        }
+
+        [HttpGet]
+        [Route("saudacao")]
+        public IActionResult GetSaudacao()
+        {
+            return Ok($"Olá {this.User.GetUsername()}! Você é um '{this.User.GetRole()}'");
         }
     }
 }

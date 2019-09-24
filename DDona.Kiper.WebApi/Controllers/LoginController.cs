@@ -47,7 +47,8 @@ namespace DDona.Kiper.WebApi.Controllers
             {
                 Subject = new ClaimsIdentity(new Claim[]
                 {
-                    new Claim(ClaimTypes.Name, response.Username)
+                    new Claim(ClaimTypes.Name, response.Username),
+                    new Claim(ClaimTypes.Role, "Administrator")
                 }),
                 Expires = DateTime.UtcNow.AddSeconds(_settings.Value.TokenConfiguration.Seconds),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
