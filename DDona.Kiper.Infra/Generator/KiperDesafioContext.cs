@@ -96,7 +96,11 @@ namespace DDona.Kiper.Infra
             {
                 entity.Property(e => e.Id).HasColumnType("int(11)");
 
-                entity.Property(e => e.Senha)
+                entity.Property(e => e.Password)
+                    .IsRequired()
+                    .HasColumnType("varchar(200)");
+
+                entity.Property(e => e.Salt)
                     .IsRequired()
                     .HasColumnType("varchar(200)");
 

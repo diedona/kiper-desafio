@@ -5,12 +5,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Interfaces\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\DDona.Kiper.Domain\DDona.Kiper.Domain.csproj" />
     <ProjectReference Include="..\DDona.Kiper.Infra\DDona.Kiper.Infra.csproj" />
+    <ProjectReference Include="..\DDona.Kiper.Utils\DDona.Kiper.Utils.csproj" />
   </ItemGroup>
 
 </Project>
