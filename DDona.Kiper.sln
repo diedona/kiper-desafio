@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DDona.Kiper.Infra", "DDona.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DDona.Kiper.Service", "DDona.Kiper.Service\DDona.Kiper.Service.csproj", "{37996B03-7B37-4263-B7D3-8BF85D71B62F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDona.Kiper.Utils", "DDona.Kiper.Utils\DDona.Kiper.Utils.csproj", "{7899B620-839A-4A5D-8152-7CD4C4BE14D8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DDona.Kiper.Utils", "DDona.Kiper.Utils\DDona.Kiper.Utils.csproj", "{7899B620-839A-4A5D-8152-7CD4C4BE14D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDona.Kiper.WebApi", "DDona.Kiper.WebApi\DDona.Kiper.WebApi.csproj", "{F77B1FCB-FC74-4554-87D1-875CD3C03EE7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{7899B620-839A-4A5D-8152-7CD4C4BE14D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7899B620-839A-4A5D-8152-7CD4C4BE14D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7899B620-839A-4A5D-8152-7CD4C4BE14D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F77B1FCB-FC74-4554-87D1-875CD3C03EE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F77B1FCB-FC74-4554-87D1-875CD3C03EE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F77B1FCB-FC74-4554-87D1-875CD3C03EE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F77B1FCB-FC74-4554-87D1-875CD3C03EE7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
