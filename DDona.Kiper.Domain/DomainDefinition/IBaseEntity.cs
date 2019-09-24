@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DDona.Kiper.Domain.BaseDomain
+namespace DDona.Kiper.Domain.DomainDefinition
 {
-    public interface IEntity
+    public interface IBaseEntity
     {
         int Id { get; set; }
         bool Status { get; set; }

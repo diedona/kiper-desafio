@@ -1,11 +1,11 @@
-﻿using DDona.Kiper.Domain.BaseDomain;
+﻿using DDona.Kiper.Domain.DomainDefinition;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace DDona.Kiper.Domain
 {
-    public partial class Morador : IEntity
+    public partial class Morador : IBaseEntity
     {
     }
 }
