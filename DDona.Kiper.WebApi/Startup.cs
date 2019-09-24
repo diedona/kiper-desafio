@@ -31,6 +31,8 @@ namespace DDona.Kiper.WebApi
             StartupConfiguration.ConfigureDB(services, Configuration);
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.Configure<AppSettings>(Configuration.GetSection("AppSettings"));
+            StartupConfiguration.ConfigureAuthentication(services, Configuration);
+            StartupConfiguration.InjectServices(services);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -47,6 +49,7 @@ namespace DDona.Kiper.WebApi
             }
 
             app.UseHttpsRedirection();
+            app.UseAuthentication();
             app.UseMvc();
         }
     }

@@ -8,5 +8,6 @@ namespace DDona.Kiper.WebApi.Config
     public class AppSettings
     {
         public string ApplicationName { get; set; }
+        public TokenConfiguration TokenConfiguration { get; set; }
     }
 }

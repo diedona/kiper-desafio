@@ -3,7 +3,8 @@ using DDona.Kiper.Service.Base;
 
 namespace DDona.Kiper.Service
 {
-    internal interface IUsuarioService : IBaseService<Usuario>
+    public interface IUsuarioService : IBaseService<Usuario>
     {
+        bool ValidateUsernamePassword(string username, string password);
     }
 }

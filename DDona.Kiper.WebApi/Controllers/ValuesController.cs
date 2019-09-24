@@ -1,4 +1,5 @@
-﻿using DDona.Kiper.WebApi.Config;
+﻿using DDona.Kiper.Utils.HashManager;
+using DDona.Kiper.WebApi.Config;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 
@@ -19,7 +20,9 @@ namespace DDona.Kiper.WebApi.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            return Ok(new { text = _settings.Value.ApplicationName });
+            string salt = HashManager.CreateSalt();
+            string hash = HashManager.CreateHash("123123", salt);
+            return Ok(new { salt = salt, hash = hash });
         }
     }
 }
