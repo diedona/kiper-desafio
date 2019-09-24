@@ -56,6 +56,7 @@ namespace DDona.Kiper.WebApi
         internal static void InjectServices(IServiceCollection services)
         {
             services.AddScoped<IUsuarioService, UsuarioService>();
+            services.AddScoped<ICondominioService, CondominioService>();
         }
     }
 }

@@ -1,0 +1,9 @@
+﻿namespace DDona.Kiper.WebApi.ViewModel.Condominio
+{
+    public class CondominioViewModel
+    {
+        public int Id { get; set; }
+        public string Nome { get; set; }
+        public bool Status { get; set; }
+    }
+}
