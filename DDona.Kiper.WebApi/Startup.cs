@@ -48,8 +48,8 @@ namespace DDona.Kiper.WebApi
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
             app.UseAuthentication();
+            app.UseHttpsRedirection();
             app.UseMvc();
         }
     }
